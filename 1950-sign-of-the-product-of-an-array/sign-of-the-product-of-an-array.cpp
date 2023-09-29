@@ -6,7 +6,8 @@ public:
             return 0;
         short res = 1;
         for(int i = 0; i < nums.size() ;i++)
-            res *=(nums[i] > 0 ? 1 : -1);
+            if (nums[i] < 0)
+                res*= -1;
         return res;
     }
 };
