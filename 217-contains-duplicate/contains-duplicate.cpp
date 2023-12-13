@@ -1,8 +1,7 @@
 class Solution {
 public:
-    bool containsDuplicate(vector<int>& vec)
-    {
-        std::set<int> set(vec.begin(), vec.end());
-        return (set.size() != vec.size());
+    bool containsDuplicate(vector<int>& nums) {
+        std::set<int> set(nums.begin(), nums.end());
+        return set.size() != nums.size();
     }
 };
