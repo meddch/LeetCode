@@ -4,8 +4,8 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
+        for char in string.punctuation:
+            s = s.replace(char,'')
+        s = s.replace(" ", "")
         s = s.lower()
-        for char in s:
-            if not char.isalnum():
-                s = s.replace(char,'').lower()
         return  s == s[::-1]
